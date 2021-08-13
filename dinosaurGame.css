@@ -1,0 +1,82 @@
+.background {
+    background-image: url('landing-page-background.jpeg');
+    background-size: cover;
+    max-height: 100% auto;
+    max-width: 100% auto;
+}
+
+#headingtitle {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    /* font-family: 'fantasy', 'copperplate'; */
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-size: 50px;
+}
+
+#playButton {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    cursor: pointer;
+}
+
+#game {
+    border: 1px solid black;
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+#dinoCactus {
+    width: 20px;
+    height: 30px;
+    background-image: url('dinoCactus.png');
+    background-size: 20px 30px;
+    position: relative;
+    top: 170px;
+    left: 500px;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url('dinoGameDino.png');
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 130px;
+    }
+    50% {
+        top: 80px;
+    }
+    80% {
+        top: 130px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes cactus {
+    0% {
+        top: 170px;
+        left: 500px;
+    }
+}
+
+
+/* #dinoCactus2 {
+    height: 60px;
+    width: 50px;
+} */
