@@ -2,20 +2,33 @@
 <html lang="en">
 
 <head>
-    <title>No Internet Dinosaur Game</title>
+    <title> No Internet Dinosaur Game </title>
     <link rel="stylesheet" href="dinosaurGame.css">
 </head>
 
-<body>
-    <div id="game">
-        <div id="dino">
-        </div>
-        <div id="dinoCactus">
-        </div>
-        <!-- <div id="dinoCactus2">
-        </div> -->
+<body id="background">
+    <div class="backbutton">
+        <a href="landingpage.html"> <img src="1imgs/back.png"> </img>
+        </a>
     </div>
-    <scripts src="dinosaurGame.js" />
+    <div id="game">
+        <div id="dino"></div>
+        <div id="dinoCactus"></div>
+    </div>
+    <div class="losing-message" id="losingMessage">
+        <div id="gamecontainer">
+            <div class="backbutton">
+                <a href="landingpage.html"> <img src="1imgs/back.png"> </img>
+                </a>
+            </div>
+            <div id="wordscontainer">
+                <div class="gameover"> G A M E <br> O V E R </div>
+                <button id="myBtn"> RESTART </button>
+            </div>
+
+        </div>
+    </div>
+    <script src="dinosaurGame.js"></script>
 </body>
 
 </html>

@@ -1,82 +1,145 @@
-.background {
-    background-image: url('landing-page-background.jpeg');
-    background-size: cover;
-    max-height: 100% auto;
-    max-width: 100% auto;
+#background {
+    background-color: rgb(134, 217, 255);
 }
 
-#headingtitle {
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    /* font-family: 'fantasy', 'copperplate'; */
-    font-family: Copperplate, Copperplate Gothic Light, fantasy;
-    font-size: 50px;
-}
-
-#playButton {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 150px;
-    cursor: pointer;
+.backbutton {
+    height: 50px;
+    width: 50px;
+    padding-left: 5px;
 }
 
 #game {
-    border: 1px solid black;
-    height: 200px;
-    width: 600px;
-    display: flex;
-    flex-direction: row;
-}
-
-#dinoCactus {
-    width: 20px;
-    height: 30px;
-    background-image: url('dinoCactus.png');
-    background-size: 20px 30px;
-    position: relative;
-    top: 170px;
-    left: 500px;
+    width: 1200px;
+    height: 400px;
+    background-image: url("1imgs/gamebackground.png");
+    background-size: 1800px 700px;
+    margin-top: 5%;
+    margin-left: 7.5%;
 }
 
 #dino {
-    width: 50px;
-    height: 50px;
-    background-image: url('dinoGameDino.png');
-    background-size: 50px 50px;
+    width: 140px;
+    height: 90px;
+    background-image: url("1imgs/goodtrex.png");
+    background-size: 140px 90px;
     position: relative;
-    top: 150px;
-    animation: jump 0.3s linear;
+    top: 290px;
+    left: 25px;
+}
+
+.jump {
+    animation: jump 0.4s linear;
 }
 
 @keyframes jump {
     0% {
-        top: 150px;
+        top: 300px;
     }
     30% {
-        top: 130px;
-    }
-    50% {
-        top: 80px;
-    }
-    80% {
-        top: 130px;
-    }
-    100% {
         top: 150px;
     }
+    50% {
+        top: 120px;
+    }
+    70% {
+        top: 150px;
+    }
+    100% {
+        top: 300px;
+    }
+}
+
+#dinoCactus {
+    width: 40px;
+    height: 70px;
+    background-image: url("1imgs/dinoCactus.png");
+    background-size: 40px 70px;
+    position: relative;
+    top: 220px;
+    right: 700px;
+    animation: cactus 2.2s linear infinite;
 }
 
 @keyframes cactus {
     0% {
-        top: 170px;
-        left: 500px;
+        left: 1150px;
+    }
+    100% {
+        left: 0px;
     }
 }
 
 
-/* #dinoCactus2 {
-    height: 60px;
-    width: 50px;
-} */
+/* ----------------------------------------------------------------------------- */
+
+.gameover {
+    font-size: 90px;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    background-image: linear-gradient( to left, #ec0f76, #ccff02, #42ff00, #42ffff, blue, #d400ff, #ec0f76, #ccff02, #42ffff, blue, #d400ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    background-position: -100%;
+    animation: cooltext 3s infinite linear;
+    padding-bottom: 100px;
+}
+
+@keyframes cooltext {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 150%;
+    }
+}
+
+.losing-message {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.losing-message button {
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-size: 30px;
+    border-radius: 30%;
+}
+
+.losing-message button:hover {
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.losing-message.show {
+    display: flex;
+}
+
+#gamecontainer {
+    background-color: rgb(145, 236, 252);
+    height: 100%;
+    width: 100%;
+}
+
+#wordscontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 150px;
+}
